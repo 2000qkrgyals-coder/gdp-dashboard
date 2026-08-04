@@ -918,7 +918,7 @@ def estimate_staff_from_units(area, units):
         )
 
     if units < 8:
-    support = 0
+        support = 0
     elif units < 16:
         support = 1
     elif units < 24:
