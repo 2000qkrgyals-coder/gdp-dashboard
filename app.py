@@ -688,7 +688,7 @@ def load_data(file_mtime):
         df["구역"].isin(AREA_LIST)
     ]
   
-            df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0)
+    df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0)
 
     df = df[df["일자"].str.startswith("2025-")]
     df = df[df["구역"].isin(AREA_LIST)]
