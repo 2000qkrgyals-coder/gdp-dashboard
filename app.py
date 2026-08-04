@@ -918,40 +918,14 @@ def estimate_staff_from_units(area, units):
         )
 
     if units < 8:
-        support = 0
-
-    elif units < 16:
-        support = 1
-
-    elif units < 24:
-        support = 2
-
-    else:
-        support = 3
-
-    return (
-        units
-        + support
-    )
-  
-        support = 1 if units >= 3 else 0
-        return units + support
-
-    if area in SELF_COUNTERS:
-        return min(math.ceil(units / 6), 3)
-
-    if area in IM_AREAS:
-        return units + calc_im_support_staff(units)
-
-    if units < 8:
-        support = 0
+    support = 0
     elif units < 16:
         support = 1
     elif units < 24:
         support = 2
     else:
         support = 3
-
+    
     return units + support
    
 
